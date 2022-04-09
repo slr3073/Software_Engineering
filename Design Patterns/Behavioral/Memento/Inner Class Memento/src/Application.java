@@ -3,6 +3,7 @@ public class Application {
         TextArea textArea = new TextArea();
         TextManager manager = new TextManager(textArea);
 
+        //Mistake has been made
         manager.addText("Helo");
         System.out.println(textArea.getText());
 

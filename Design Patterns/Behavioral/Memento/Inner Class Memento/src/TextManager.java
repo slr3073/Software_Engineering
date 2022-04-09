@@ -1,22 +1,22 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class TextManager {
     private final TextArea textArea;
-    private final List<TextArea.Snapshot> snapshots = new ArrayList<>();
+    private final Deque<TextArea.Snapshot> history = new ArrayDeque<>();
 
     public TextManager(TextArea textArea) {
         this.textArea = textArea;
     }
 
     public void addText(String s) {
-        snapshots.add(textArea.save());
+        history.push(textArea.save());
         textArea.addText(s);
     }
 
     public void undo() {
-        if (snapshots.isEmpty()) return;
+        if (history.isEmpty()) return;
 
-        textArea.restore(snapshots.remove(snapshots.size() - 1));
+        textArea.restore(history.pop());
     }
 }
