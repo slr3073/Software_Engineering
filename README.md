@@ -20,6 +20,8 @@
 4. Strategy
 5. Template Method
 6. Memento
-7. Command
+   1. Inner Class Memento
+   2. Memento by Downcasting Opaque Interface
+8. Command
 
 
