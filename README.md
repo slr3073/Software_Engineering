@@ -3,8 +3,10 @@
 ## Design Patterns
 ### Creationnal
 1. Singleton
-2. Factory Method
-3. Abstract Factory
+   1. Lazy Loaded Singleton
+   2. Pre Loaded Singleton
+3. Factory Method
+4. Abstract Factory
 ### Structural
 1. Adapter
 2. Bridge
