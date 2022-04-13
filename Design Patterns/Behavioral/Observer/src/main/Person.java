@@ -1,3 +1,7 @@
+package main;
+
+import publisher.Artist;
+
 import java.util.Random;
 
 public class Person implements Subscriber {
@@ -5,6 +9,14 @@ public class Person implements Subscriber {
 
     public Person(String name) {
         this.name = name;
+    }
+
+    public void subscribe(Artist artist){
+        artist.getNotificationManager().subscribe(this);
+    }
+
+    public void unsubscribe(Artist artist){
+        artist.getNotificationManager().unsubscribe(this);
     }
 
     @Override
