@@ -13,8 +13,6 @@
 5. Proxy
 ### Behavioral
 1. Observer
-   1. Push Observer
-   2. Pull Observer
 2. Mediator
 3. State
 4. Strategy
